@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  url: 'http://interstagedemo:49950/aa/'
+  url: 'http://interstagedemo:49950/aa/',
+  tenant: 'Default',
+  application: 'Unstructured'
 };
 
 /*
