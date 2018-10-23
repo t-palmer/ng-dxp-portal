@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {BpmConnectionApplication, BpmProcessInstance, BpmService, ProcessInstanceFilter} from 'ng-bpm';
 import { environment } from '../../environments/environment';
+import {ApplicationStateService} from '../application-state.service';
+import {NavTab} from '../core/core-types';
 
 @Component({
   selector: 'dxp-page-process-instance-list',
@@ -15,10 +17,12 @@ export class PageProcessInstanceListComponent implements OnInit {
   private application = environment.application;
 
   constructor(
-    private bpmService: BpmService
+    private bpmService: BpmService,
+    private applicationStateService: ApplicationStateService
   ) { }
 
   ngOnInit() {
+    this.applicationStateService.activeTab = NavTab.Processes;
     this.applicationConnection = new BpmConnectionApplication(this.server, this.tenant, this.application);
     this.getProcessInstanceList();
   }

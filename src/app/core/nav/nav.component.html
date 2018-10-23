@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">DXP Portal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" [ngClass]="{'active': applicationStateService.activeTab === NavTab.Home}">
+        <a class="nav-link" href="home">Home</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': applicationStateService.activeTab === NavTab.Tasks}">
+        <a class="nav-link" href="wilist">Tasks</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': applicationStateService.activeTab === NavTab.Processes}">
+        <a class="nav-link" href="pilist">Processes</a>
+      </li>
+    </ul>
+  </div>
+</nav>

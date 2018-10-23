@@ -8,6 +8,7 @@ import { BpmModule } from 'ng-bpm';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageWorkItemListComponent } from './page-work-item-list/page-work-item-list.component';
 import { PageProcessInstanceListComponent } from './page-process-instance-list/page-process-instance-list.component';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageProcessInstanceListComponent } from './page-process-instance-list/p
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BpmModule
+    BpmModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
